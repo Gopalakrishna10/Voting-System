@@ -17,10 +17,12 @@ app.get("/",(req,res)=>{
 
 const voterRouter = require("./routes/voteRouter")
 const partyRouter = require("./routes/partyRouter")
+const resultRouter  = require("./routes/resultRouter")
 
 
 app.use("/vote",voterRouter)
 app.use("/party",partyRouter)
+app.use("/result",resultRouter)
 
 
 app.listen(process.env.PORT || 3000)

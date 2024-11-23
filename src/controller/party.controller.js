@@ -52,14 +52,14 @@ module.exports.party = async(req,res)=>{
 module.exports.partyregistation = async(req,res)=>{
 
     try {
-        const {BJP,CONG,TRS,MIM}  = req.body
+        const {bjp,cong,trs,mim}  = req.body
 
         const create= await partyModel.create({
-            BJP,CONG,TRS,MIM
+            bjp,cong,trs,mim
         })
         res.send("created partys")
 
     } catch (error) {
-        console.log(error.message);
+        res.send(error.message);
     }
 }

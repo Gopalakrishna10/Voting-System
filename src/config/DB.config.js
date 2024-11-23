@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 mongoose.
-connect(`${process.env.MONGODB}/vote`).then(()=>{
+connect("mongodb://localhost:27017/vote").then(()=>{
     console.log("db Connected");
 })
 

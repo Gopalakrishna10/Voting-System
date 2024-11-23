@@ -16,6 +16,6 @@ module.exports.createVotter = async(req,res)=>{
 
         res.send("user created succesfully")
     } catch (error) {
-        console.log(error.message);
+        res.send(error.message);
     }
 }
